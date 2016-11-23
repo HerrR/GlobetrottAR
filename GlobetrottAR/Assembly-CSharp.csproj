@@ -46,6 +46,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AutoFocus.cs" />
+     <Compile Include="Assets\Earth\Scripts\EarthScript.cs" />
+     <Compile Include="Assets\Earth\Scripts\MoveScript.cs" />
+     <Compile Include="Assets\Earth\Scripts\SphereScript.cs" />
      <Compile Include="Assets\Scripts\EdgeTest.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
@@ -89,9 +92,12 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\SecondTry.xml" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\Earth\Readme.txt" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\Earth\Materials\EarthShader.shader" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
