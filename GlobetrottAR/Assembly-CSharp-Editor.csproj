@@ -61,7 +61,11 @@
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\readme_SDK.txt" />
+     <None Include="Assets\StreamingAssets\QCAR\FirstTry.xml" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+ <Reference Include="Assembly-UnityScript-Editor-firstpass">
+ <HintPath>/Users/rickardbergeling/GitHub/GlobetrottAR/GlobetrottAR/Library/ScriptAssemblies/Assembly-UnityScript-Editor-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -89,6 +93,12 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
+ <Reference Include="Vuforia.UnityExtensions.Editor">
+ <HintPath>/Users/rickardbergeling/GitHub/GlobetrottAR/GlobetrottAR/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Vuforia.UnityExtensions">
+ <HintPath>/Users/rickardbergeling/GitHub/GlobetrottAR/GlobetrottAR/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -101,12 +111,10 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Vuforia.UnityExtensions">
- <HintPath>/Users/rickardbergeling/GitHub/GlobetrottAR/GlobetrottAR/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
- </Reference>
- <Reference Include="Vuforia.UnityExtensions.Editor">
- <HintPath>/Users/rickardbergeling/GitHub/GlobetrottAR/GlobetrottAR/Assets/Vuforia/Editor/Scripts/Vuforia.UnityExtensions.Editor.dll</HintPath>
- </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{6FA92C89-20ED-9B07-AE40-0492AB151AC5}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

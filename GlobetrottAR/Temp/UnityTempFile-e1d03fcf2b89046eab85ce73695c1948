@@ -88,6 +88,8 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
+'Assets/AutoFocus.cs'
+'Assets/Scripts/EdgeTest.cs'
 'Assets/Vuforia/Scripts/BackgroundPlaneBehaviour.cs'
 'Assets/Vuforia/Scripts/CloudRecoBehaviour.cs'
 'Assets/Vuforia/Scripts/CylinderTargetBehaviour.cs'
