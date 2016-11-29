@@ -19,7 +19,7 @@ public class ModelStabilityScript : MonoBehaviour {
 	}
 
 	public void OnTrackablesUpdated() {
-		Debug.Log ("New trackable shit");
+//		Debug.Log ("New trackable shit");
 		if (rotations.Count >= smoothingFrames) {
 			rotations.Dequeue();
 			positions.Dequeue();
