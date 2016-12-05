@@ -4,9 +4,11 @@
 		_DayTex ("Day Texture", 2D) = "white" {}
 		_NightTex ("Night Texture", 2D) = "white" {}
 		_NormalMap ("Normal Map", 2D) = "white" {}
+		_SpecMap("Specular Map", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
 		_Transition ("Transition", Range(0,10)) = 0.0
+		_HighlightTransition("Highlight Transition", Range(0,10)) = 0.0
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -22,11 +24,13 @@
 		sampler2D _DayTex;
 		sampler2D _NightTex;
 		sampler2D _NormalMap;
+		sampler2D _SpecMap;
 
 		struct Input {
 			float2 uv_DayTex;
 			float2 uv_NightTex;
 			float2 uv_NormalMap;
+			float2 uv_SpecMap;
 			float3 worldNormal;
 			/*float3 bitangent;
 			float3 tangent;
@@ -36,6 +40,7 @@
 		half _Glossiness;
 		half _Metallic;
 		half _Transition;
+		half _HighlightTransition;
 		fixed4 _Color;
 
 		/*void vert(inout appdata_tan i, out Input o) {
@@ -46,8 +51,9 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
-			fixed4 dayColor = tex2D(_DayTex, IN.uv_DayTex) * _Color;
-			fixed4 nightColor = tex2D(_NightTex, IN.uv_NightTex) * _Color;
+			fixed4 dayColor = tex2D(_DayTex, IN.uv_DayTex);
+			fixed4 nightColor = tex2D(_NightTex, IN.uv_NightTex);
+			fixed4 specColor = tex2D(_SpecMap, IN.uv_SpecMap);
 			float3 n = IN.worldNormal;
 			float3 lightDir = normalize(_WorldSpaceLightPos0.xyz);
 			half blend = dot(n, lightDir);
@@ -59,11 +65,9 @@
 
 			//o.Normal = UnpackNormal(tex2D(_NormalMap, IN.uv_NormalMap));
 
-			//o.Albedo = _Color * blend;
 			o.Albedo = dayColor * blend + nightColor * (1 - blend);
-			// Metallic and smoothness come from slider variables
-			// o.Metallic = _Metallic;
-			// o.Smoothness = _Glossiness;
+			o.Metallic = _Metallic * specColor;
+			o.Smoothness = _Glossiness * specColor;
 			o.Alpha = dayColor.a * blend + nightColor.a * (1 - blend);
 		}
 		ENDCG
