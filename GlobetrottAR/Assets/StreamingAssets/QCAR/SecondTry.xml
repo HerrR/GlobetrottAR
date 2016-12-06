@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Zoomed_out_South_East_Asia" size="0.160000 0.150509" />
+    <ImageTarget name="Zoomed_out_Pacific_Right" size="0.155000 0.155000" />
+    <ImageTarget name="Zoomed_out_Pacific_Middle" size="0.170000 0.170000" />
+    <ImageTarget name="Zoomed_out_Indian_Ocean_Upper" size="0.150000 0.179783" />
+    <ImageTarget name="Zoomed_out_Australia_Upper" size="0.170000 0.170000" />
+    <ImageTarget name="Zoomed_out_Australia_right" size="0.160000 0.160000" />
+    <ImageTarget name="Zoomed_out_Atlantic" size="0.150000 0.150000" />
+    <ImageTarget name="Zoomed_out_America_Upper" size="0.160000 0.160000" />
+    <ImageTarget name="Zoomed_out_Africa_east" size="0.180000 0.202270" />
+    <ImageTarget name="Africa_zoomed_out" size="0.190000 0.163196" />
+    <ImageTarget name="USA" size="0.010000 0.007057" />
+    <ImageTarget name="South_East_Asia_ish" size="0.080000 0.039002" />
+    <ImageTarget name="Russia" size="0.085000 0.061877" />
+    <ImageTarget name="North_Africa" size="0.085000 0.066273" />
+    <ImageTarget name="Europe" size="0.090000 0.055901" />
+    <ImageTarget name="China" size="0.012000 0.008138" />
+    <ImageTarget name="Central_Africa_Angola_Mocambique" size="0.095000 0.057992" />
+  </Tracking>
+</QCARConfig>
