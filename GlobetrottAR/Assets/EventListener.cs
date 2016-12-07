@@ -14,7 +14,7 @@ public class EventListener : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (transform.hasChanged) {
-			if (transform.position.x <= 930 && transform.position.x >= 910) {
+			if (transform.position.x <= 2360 && transform.position.x >= 2260) {
 				popup.GetComponent<Image>().CrossFadeAlpha(1f, 0.3f, false);
 			} else {
 				popup.GetComponent<Image>().CrossFadeAlpha(0f, 0.3f, false);
