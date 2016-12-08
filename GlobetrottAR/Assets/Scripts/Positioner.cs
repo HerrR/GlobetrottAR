@@ -12,6 +12,6 @@ public class Positioner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = coordinator.getGlobePosition ();
+		transform.position = coordinator.GetGlobePosition ();
 	}
 }

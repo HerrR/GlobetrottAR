@@ -18,6 +18,7 @@ public class PathWalker : MonoBehaviour {
 		if (time < 0) {
 			time = 0f;
 		}
+        time += Time.deltaTime;
 		transform.position = path.GetPosition (time * 1000f);
 	}
 }
