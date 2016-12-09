@@ -29,6 +29,6 @@ public class FoWBlitter : MonoBehaviour {
         GL.Clear(false, true, Color.black);
         Graphics.SetRenderTarget(fowTexture2);
         GL.Clear(false, true, Color.black);
-        Graphics.SetRenderTarget(null);
+        //Graphics.SetRenderTarget(null);
     }
 }
