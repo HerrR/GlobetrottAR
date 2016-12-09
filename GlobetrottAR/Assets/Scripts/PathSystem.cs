@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class PathSystem : MonoBehaviour {
 
 	public PathNode root;
+	public PathNode nextNode;
 
 	private float totalLength = 0f;
 
@@ -20,17 +21,17 @@ public class PathSystem : MonoBehaviour {
 	}
 
 	public Vector3 GetPosition(float time) {
-		PathNode node = root;
+		nextNode = root;
 		PathNode parent = null;
 		float timeCounter = 0f;
 		while (timeCounter <= time) {
-				timeCounter += node.time;
-			if (node.next != null) {
-				parent = node;
-				node = node.next;
+			timeCounter += nextNode.time;
+			if (nextNode.next != null) {
+				parent = nextNode;
+				nextNode = nextNode.next;
 			} else {
 				// Just return last nodes position
-				return node.transform.position;
+				return nextNode.transform.position;
 			}
 		}
 		float timeDiff = parent.time - (timeCounter - time);

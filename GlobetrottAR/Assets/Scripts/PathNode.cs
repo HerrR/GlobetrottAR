@@ -8,6 +8,7 @@ public class PathNode : MonoBehaviour {
 	[HideInInspector]
 	public float time = 0f;
 	public PathNode next = null;
+	public bool travelToOnWater;
 
 
 	// Use this for initialization
