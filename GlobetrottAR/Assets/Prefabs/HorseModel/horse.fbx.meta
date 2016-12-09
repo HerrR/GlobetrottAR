@@ -1,0 +1,327 @@
+fileFormatVersion: 2
+guid: a42a98370db74b5469ff8e0fb8481531
+timeCreated: 1481274733
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: back
+    100004: BackCalf.L
+    100006: BackCalf.R
+    100008: BackFoot.L
+    100010: BackFoot.R
+    100012: BackLowerThigh.L
+    100014: BackLowerThigh.R
+    100016: BackThigh.L
+    100018: BackThigh.R
+    100020: BackToe.L
+    100022: BackToe.L_end
+    100024: BackToe.R
+    100026: BackToe.R_end
+    100028: Base
+    100030: Belly
+    100032: Chest
+    100034: Ctrl_Ear.L
+    100036: Ctrl_Ear.L_end
+    100038: Ctrl_Ear.R
+    100040: Ctrl_Ear.R_end
+    100042: Ear.L
+    100044: Ear.L.001
+    100046: Ear.L.002
+    100048: Ear.L.002_end
+    100050: Ear.R
+    100052: Ear.R.001
+    100054: Ear.R.002
+    100056: Ear.R.002_end
+    100058: ForeCalf.L
+    100060: ForeCalf.R
+    100062: ForeFoot.L
+    100064: ForeFoot.R
+    100066: ForeThigh.L
+    100068: ForeThigh.L.001
+    100070: ForeThigh.R
+    100072: ForeThigh.R.001
+    100074: ForeToe.L
+    100076: ForeToe.L_end
+    100078: ForeToe.R
+    100080: ForeToe.R_end
+    100082: Head
+    100084: Horse
+    100086: //RootNode
+    100088: left
+    100090: NeckBase
+    100092: Pelvis
+    100094: Pelvis.002
+    100096: Pelvis.003
+    100098: Pelvis.004
+    100100: Pelvis.005
+    100102: Pelvis.005_end
+    100104: Ribcage
+    100106: Underbelly
+    100108: UpperChest
+    100110: UpperNeck
+    400000: Armature
+    400002: back
+    400004: BackCalf.L
+    400006: BackCalf.R
+    400008: BackFoot.L
+    400010: BackFoot.R
+    400012: BackLowerThigh.L
+    400014: BackLowerThigh.R
+    400016: BackThigh.L
+    400018: BackThigh.R
+    400020: BackToe.L
+    400022: BackToe.L_end
+    400024: BackToe.R
+    400026: BackToe.R_end
+    400028: Base
+    400030: Belly
+    400032: Chest
+    400034: Ctrl_Ear.L
+    400036: Ctrl_Ear.L_end
+    400038: Ctrl_Ear.R
+    400040: Ctrl_Ear.R_end
+    400042: Ear.L
+    400044: Ear.L.001
+    400046: Ear.L.002
+    400048: Ear.L.002_end
+    400050: Ear.R
+    400052: Ear.R.001
+    400054: Ear.R.002
+    400056: Ear.R.002_end
+    400058: ForeCalf.L
+    400060: ForeCalf.R
+    400062: ForeFoot.L
+    400064: ForeFoot.R
+    400066: ForeThigh.L
+    400068: ForeThigh.L.001
+    400070: ForeThigh.R
+    400072: ForeThigh.R.001
+    400074: ForeToe.L
+    400076: ForeToe.L_end
+    400078: ForeToe.R
+    400080: ForeToe.R_end
+    400082: Head
+    400084: Horse
+    400086: //RootNode
+    400088: left
+    400090: NeckBase
+    400092: Pelvis
+    400094: Pelvis.002
+    400096: Pelvis.003
+    400098: Pelvis.004
+    400100: Pelvis.005
+    400102: Pelvis.005_end
+    400104: Ribcage
+    400106: Underbelly
+    400108: UpperChest
+    400110: UpperNeck
+    4300000: Horse
+    7400000: Walk
+    9500000: //RootNode
+    13700000: Horse
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Base
+        weight: 1
+      - path: Armature/Base/Pelvis
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.L
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.L/BackLowerThigh.L
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.L/BackLowerThigh.L/BackCalf.L
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.L/BackLowerThigh.L/BackCalf.L/BackFoot.L
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.L/BackLowerThigh.L/BackCalf.L/BackFoot.L/BackToe.L
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.L/BackLowerThigh.L/BackCalf.L/BackFoot.L/BackToe.L/BackToe.L_end
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.R
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.R/BackLowerThigh.R
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.R/BackLowerThigh.R/BackCalf.R
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.R/BackLowerThigh.R/BackCalf.R/BackFoot.R
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.R/BackLowerThigh.R/BackCalf.R/BackFoot.R/BackToe.R
+        weight: 1
+      - path: Armature/Base/Pelvis/BackThigh.R/BackLowerThigh.R/BackCalf.R/BackFoot.R/BackToe.R/BackToe.R_end
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.L
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.L/ForeThigh.L.001
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.L/ForeThigh.L.001/ForeCalf.L
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.L/ForeThigh.L.001/ForeCalf.L/ForeFoot.L
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.L/ForeThigh.L.001/ForeCalf.L/ForeFoot.L/ForeToe.L
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.L/ForeThigh.L.001/ForeCalf.L/ForeFoot.L/ForeToe.L/ForeToe.L_end
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.R
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.R/ForeThigh.R.001
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.R/ForeThigh.R.001/ForeCalf.R
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.R/ForeThigh.R.001/ForeCalf.R/ForeFoot.R
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.R/ForeThigh.R.001/ForeCalf.R/ForeFoot.R/ForeToe.R
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/ForeThigh.R/ForeThigh.R.001/ForeCalf.R/ForeFoot.R/ForeToe.R/ForeToe.R_end
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ctrl_Ear.L
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ctrl_Ear.L/Ctrl_Ear.L_end
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ctrl_Ear.R
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ctrl_Ear.R/Ctrl_Ear.R_end
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.L
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.L/Ear.L.001
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.L/Ear.L.001/Ear.L.002
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.L/Ear.L.001/Ear.L.002/Ear.L.002_end
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.R
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.R/Ear.R.001
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.R/Ear.R.001/Ear.R.002
+        weight: 1
+      - path: Armature/Base/Pelvis/Underbelly/Belly/Ribcage/Chest/UpperChest/NeckBase/UpperNeck/Head/Ear.R/Ear.R.001/Ear.R.002/Ear.R.002_end
+        weight: 1
+      - path: Armature/Base/Pelvis.002
+        weight: 1
+      - path: Armature/Base/Pelvis.002/Pelvis.004
+        weight: 1
+      - path: Armature/Base/Pelvis.002/Pelvis.004/Pelvis.003
+        weight: 1
+      - path: Armature/Base/Pelvis.002/Pelvis.004/Pelvis.003/Pelvis.005
+        weight: 1
+      - path: Armature/Base/Pelvis.002/Pelvis.004/Pelvis.003/Pelvis.005/Pelvis.005_end
+        weight: 1
+      - path: back
+        weight: 1
+      - path: Horse
+        weight: 1
+      - path: left
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Base
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
