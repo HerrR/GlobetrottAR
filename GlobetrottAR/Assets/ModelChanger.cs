@@ -7,6 +7,7 @@ public class ModelChanger : MonoBehaviour {
 	public GameObject waterModel;
 	public GameObject landModel;
 	private GameObject activeModel;
+	private const float ANIMATION_SPEED_MULTIPLIER = 10.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class ModelChanger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (pathSystem.nextNode.travelToOnWater) {
+		if (pathSystem.lastNode.travelFromOnWater) {
 			activeModel = waterModel;
 		} else {
 			activeModel = landModel;
@@ -27,5 +28,11 @@ public class ModelChanger : MonoBehaviour {
 			landModel.SetActive (true);
 			waterModel.SetActive (false);
 		}
+		SetAnimationSpeed (pathSystem.lastNode.animationSpeed);
+	}
+
+	void SetAnimationSpeed(float s){
+		Animator animatorController = activeModel.GetComponent<Animator> ();
+		animatorController.SetFloat ("Speed", s * ANIMATION_SPEED_MULTIPLIER);
 	}
 }

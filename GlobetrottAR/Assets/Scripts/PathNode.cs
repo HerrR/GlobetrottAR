@@ -4,11 +4,12 @@ using System.Collections;
 public class PathNode : MonoBehaviour {
 
 	private float length = 0f;
+	public float animationSpeed = 0f;
 	public float timeInSek = 1f;
 	[HideInInspector]
 	public float time = 0f;
 	public PathNode next = null;
-	public bool travelToOnWater;
+	public bool travelFromOnWater;
 
 
 	// Use this for initialization
@@ -37,6 +38,7 @@ public class PathNode : MonoBehaviour {
 
 	public void SetLength(float l) {
 		length = l;
+		SetAnimationSpeed ();
 	}
 
 	void OnDrawGizmosSelected() {
@@ -44,5 +46,9 @@ public class PathNode : MonoBehaviour {
 			Gizmos.color = Color.white;
 			Gizmos.DrawLine(transform.position, next.transform.position);
 		}
+	}
+
+	void SetAnimationSpeed(){
+		animationSpeed = length / timeInSek;
 	}
 }

@@ -6,6 +6,7 @@ public class PathSystem : MonoBehaviour {
 
 	public PathNode root;
 	public PathNode nextNode;
+	public PathNode lastNode;
 
 	private float totalLength = 0f;
 
@@ -28,6 +29,7 @@ public class PathSystem : MonoBehaviour {
 			timeCounter += nextNode.time;
 			if (nextNode.next != null) {
 				parent = nextNode;
+				lastNode = parent;
 				nextNode = nextNode.next;
 			} else {
 				// Just return last nodes position
