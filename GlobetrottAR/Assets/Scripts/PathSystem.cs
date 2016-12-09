@@ -13,6 +13,7 @@ public class PathSystem : MonoBehaviour {
 	void Start () {
 		// Calculate total length and set length on every node
 		PathNode currentNode = root;
+		lastNode = currentNode;
 		while (currentNode.next != null) {
 			float length = Vector3.Distance (currentNode.transform.position, currentNode.next.transform.position);
 			currentNode.SetLength (length);
