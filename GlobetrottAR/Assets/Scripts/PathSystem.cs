@@ -6,14 +6,14 @@ public class PathSystem : MonoBehaviour {
 
 	public PathNode root;
 	public PathNode nextNode;
-	public PathNode lastNode;
+	public PathNode previousNode;
 
 	private float totalLength = 0f;
 
 	void Start () {
 		// Calculate total length and set length on every node
 		PathNode currentNode = root;
-		lastNode = currentNode;
+		previousNode = currentNode;
 		while (currentNode.next != null) {
 			float length = Vector3.Distance (currentNode.transform.position, currentNode.next.transform.position);
 			currentNode.SetLength (length);
@@ -28,9 +28,9 @@ public class PathSystem : MonoBehaviour {
 		float timeCounter = 0f;
 		while (timeCounter <= time) {
 			timeCounter += nextNode.time;
+			parent = nextNode;
+			previousNode = parent;
 			if (nextNode.next != null) {
-				parent = nextNode;
-				lastNode = parent;
 				nextNode = nextNode.next;
 			} else {
 				// Just return last nodes position
