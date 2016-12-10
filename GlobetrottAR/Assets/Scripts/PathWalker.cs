@@ -3,22 +3,21 @@ using System.Collections;
 
 public class PathWalker : MonoBehaviour {
 
-	public PathSystem path;
+	public PathManager pathManager;
+	public TimeSync timeSync;
 
-	public float time;
+	private float time;
+	private PathSystem path;
 
 	// Use this for initialization
 	void Start () {
-	
+		time = 0f;
+		path = pathManager.activePath;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		Debug.Log (Time.deltaTime);
-		if (time < 0) {
-			time = 0f;
-		}
-        time += Time.deltaTime;
+		time = timeSync.time;
 		transform.position = path.GetPosition (time * 1000f);
 	}
 }

@@ -3,11 +3,13 @@ using System.Collections;
 
 public class PathNode : MonoBehaviour {
 
-	private float length = 0f;
+	public bool showInTimeline = false;
+	public float length = 1f;
 	public float timeInSek = 1f;
 	[HideInInspector]
 	public float time = 0f;
 	public PathNode next = null;
+	public string dateText = "2047";
 
 
 	// Use this for initialization

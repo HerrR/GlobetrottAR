@@ -6,7 +6,7 @@ public class PathSystem : MonoBehaviour {
 
 	public PathNode root;
 
-	private float totalLength = 0f;
+	public float totalLength = 0f;
 
 	void Start () {
 		// Calculate total length and set length on every node
@@ -39,5 +39,9 @@ public class PathSystem : MonoBehaviour {
 
 	float GetDistance(Vector3 pos1, Vector3 pos2) {
 		return Vector3.Distance (pos1, pos2);
+	}
+
+	public PathNode[] GetNodes() {
+		return GetComponentsInChildren<PathNode> ();
 	}
 }
