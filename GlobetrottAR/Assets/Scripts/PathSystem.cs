@@ -5,12 +5,15 @@ using System.Collections.Generic;
 public class PathSystem : MonoBehaviour {
 
 	public PathNode root;
+	public PathNode nextNode;
+	public PathNode previousNode;
 
 	public float totalLength = 0f;
 
 	void Start () {
 		// Calculate total length and set length on every node
 		PathNode currentNode = root;
+		previousNode = currentNode;
 		while (currentNode.next != null) {
 			float length = Vector3.Distance (currentNode.transform.position, currentNode.next.transform.position);
 			currentNode.SetLength (length);
@@ -20,17 +23,18 @@ public class PathSystem : MonoBehaviour {
 	}
 
 	public Vector3 GetPosition(float time) {
-		PathNode node = root;
+		nextNode = root;
 		PathNode parent = null;
 		float timeCounter = 0f;
 		while (timeCounter <= time) {
-				timeCounter += node.time;
-			if (node.next != null) {
-				parent = node;
-				node = node.next;
+			timeCounter += nextNode.time;
+			parent = nextNode;
+			previousNode = parent;
+			if (nextNode.next != null) {
+				nextNode = nextNode.next;
 			} else {
 				// Just return last nodes position
-				return node.transform.position;
+				return nextNode.transform.position;
 			}
 		}
 		float timeDiff = parent.time - (timeCounter - time);
