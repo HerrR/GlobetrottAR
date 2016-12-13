@@ -82,9 +82,15 @@ public class Timeline : MonoBehaviour {
 		timeSync.SetTimeMultiplier (0f);
 	}
 
-	public void Play() {
-		running = true;
-		timeSync.SetTimeMultiplier (0.51f);
+
+	public void PlayPause() {
+		if (!running) {
+			timeSync.SetTimeMultiplier (1f);
+			running = true;
+		} else {
+			timeSync.SetTimeMultiplier (0f);
+			running = false;
+		}
 	}
 
 	void UpdateTime() {
