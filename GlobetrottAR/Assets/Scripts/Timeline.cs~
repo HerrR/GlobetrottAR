@@ -12,7 +12,7 @@ public class Timeline : MonoBehaviour {
 	public RectTransform bg;
 	private PathNode[] nodes;
 
-	public float scale = 10f;
+	public float scale = 5f;
 	private float direction = -1f;
 
 	private bool running = false;
@@ -90,6 +90,12 @@ public class Timeline : MonoBehaviour {
 			timeSync.SetTimeMultiplier (1f);
 			running = true;
 			GameObject.Find ("PlayButton").GetComponent<Image> ().sprite = pauseSprite;
+			// Hide EventPopup and its children because it should never be shown while running
+			GameObject.Find("EventPopup").GetComponent<Image>().CrossFadeAlpha(0f, 0.5f, false);
+			GameObject.Find ("Title").GetComponent<Text> ().CrossFadeAlpha (0f, 0.5f, false);
+			GameObject.Find ("Date").GetComponent<Text> ().CrossFadeAlpha (0f, 0.5f, false);
+			GameObject.Find ("Year").GetComponent<Text> ().CrossFadeAlpha (0f, 0.5f, false);
+			GameObject.Find ("Description").GetComponent<Text> ().CrossFadeAlpha (0f, 0.5f, false);
 		} else {
 			timeSync.SetTimeMultiplier (0f);
 			running = false;
