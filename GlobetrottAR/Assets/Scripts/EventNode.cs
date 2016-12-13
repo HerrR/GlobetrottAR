@@ -20,9 +20,7 @@ public class EventNode : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		title = GameObject.Find ("Title").GetComponent<Text>();
-		date = GameObject.Find ("Date").GetComponent<Text>();
-		description = GameObject.Find ("Description").GetComponent<Text>(); 
+		
 		//eventText = eventImage.GetComponentInChildren<Text> ();
 	}
 	
@@ -33,6 +31,9 @@ public class EventNode : MonoBehaviour {
 
 	void OnTriggerEnter() {
 		eventImage.gameObject.SetActive (true);
+		title = GameObject.Find ("Title").GetComponent<Text>();
+		date = GameObject.Find ("Date").GetComponent<Text>();
+		description = GameObject.Find ("Description").GetComponent<Text>(); 
 		GameObject go = (GameObject)Instantiate (globeEventPrefab);
 		globeEvent = go.GetComponent<GlobeEvent> ();
 		globeEvent.SetPosition (coordinator.GetGlobePosition(transform.position));

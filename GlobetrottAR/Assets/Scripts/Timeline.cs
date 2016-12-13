@@ -19,6 +19,8 @@ public class Timeline : MonoBehaviour {
 
 
 	public GameObject datePrefab;
+	public Sprite playSprite;
+	public Sprite pauseSprite;
 
 	private RectTransform rt;
 
@@ -87,9 +89,11 @@ public class Timeline : MonoBehaviour {
 		if (!running) {
 			timeSync.SetTimeMultiplier (1f);
 			running = true;
+			GameObject.Find ("PlayButton").GetComponent<Image> ().sprite = pauseSprite;
 		} else {
 			timeSync.SetTimeMultiplier (0f);
 			running = false;
+			GameObject.Find ("PlayButton").GetComponent<Image> ().sprite = playSprite;
 		}
 	}
 
