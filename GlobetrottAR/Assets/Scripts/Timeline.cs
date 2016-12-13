@@ -38,7 +38,6 @@ public class Timeline : MonoBehaviour {
 		// Set width of content
 		Vector3 lastPos = CalculateDatePos(nodes[nodes.Length - 1], nodes.Length - 1);
 		float width = lastPos.x;
-		Debug.Log (width + 500f);
 		rt.sizeDelta = new Vector2(width + 500f, rt.rect.height);
 		bg.sizeDelta = new Vector2(width + 500f, bg.rect.height);
 

@@ -34,6 +34,11 @@ public class Coordinator : MonoBehaviour {
 		return LonLatToWorld (lonLat.x, lonLat.y);
 	}
 
+	public Vector3 GetGlobePosition(Vector3 pos) {
+		Vector2 lonLat = MapToLonLat (pos);
+		return LonLatToWorld (lonLat.x, lonLat.y);
+	}
+
     public Vector2 GetTexturePos() {
         float x = (transform.position.x + textureWidth / 2) / textureWidth;
         float y = (transform.position.y + textureHeight / 2) / textureHeight;
