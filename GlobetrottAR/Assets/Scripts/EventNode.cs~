@@ -94,6 +94,9 @@ public class EventNode : MonoBehaviour {
 		year.text = eventYear;
 		description.text = eventDescription;
 		// Pause time
-		GameObject.Find("Content").GetComponent<Timeline>().PlayPause();
+		Timeline timeline = GameObject.Find("Content").GetComponent<Timeline>();
+		if (timeline.running == true) {
+			timeline.PlayPause ();
+		}
 	}
 }

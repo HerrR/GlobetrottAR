@@ -15,7 +15,7 @@ public class Timeline : MonoBehaviour {
 	public float scale = 5f;
 	private float direction = -1f;
 
-	private bool running = false;
+	public bool running = false;
 
 
 	public GameObject datePrefab;
