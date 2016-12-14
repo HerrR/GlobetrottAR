@@ -19,6 +19,10 @@ public class Timeline : MonoBehaviour {
 
 
 	public GameObject datePrefab;
+	public GameObject bgStart;
+	public GameObject bgTile1;
+	public GameObject bgTile2;
+	public GameObject bgEnd;
 	public Sprite playSprite;
 	public Sprite pauseSprite;
 
@@ -43,6 +47,23 @@ public class Timeline : MonoBehaviour {
 		rt.sizeDelta = new Vector2(width + 500f, rt.rect.height);
 		bg.sizeDelta = new Vector2(width + 500f, bg.rect.height);
 
+		// Add background tiles based on content width (tiles are 400 px wide)
+		float tileWidth = bgTile1.GetComponent<RectTransform>().rect.width;
+		int numTiles = (int)Mathf.Round(width / tileWidth);
+
+		GameObject startTile = (GameObject)Instantiate (bgStart, transform);
+		RectTransform startRect = startTile.GetComponent<RectTransform> ();
+		startRect.localPosition = new Vector3 (0, startRect.localPosition.y + (startRect.sizeDelta.y/2), startRect.localPosition.z);
+
+		for (int i = 0; i < numTiles; i++) {
+			GameObject tile = (GameObject)Instantiate (bgTile1, transform);
+			RectTransform rect = tile.GetComponent<RectTransform> ();
+			rect.localPosition = new Vector3 (tileWidth + i * tileWidth, rect.localPosition.y + (rect.sizeDelta.y/2), rect.localPosition.z);
+		}
+		GameObject endTile = (GameObject)Instantiate (bgEnd, transform);
+		RectTransform endRect = endTile.GetComponent<RectTransform> ();
+		endRect.localPosition = new Vector3 (tileWidth + numTiles  * tileWidth, endRect.localPosition.y + (endRect.sizeDelta.y/2), endRect.localPosition.z);
+
 		// Add dates
 		for (int i = 0; i < nodes.Length; i++) {
 			if (nodes[i].showInTimeline) {
@@ -64,7 +85,7 @@ public class Timeline : MonoBehaviour {
 		GameObject go = (GameObject)Instantiate (datePrefab, transform);
 		Vector3 pos = CalculateDatePos (node, index);
 		RectTransform rect = go.GetComponent<RectTransform> ();
-		rect.localPosition = pos;
+		rect.localPosition = new Vector3(pos.x, pos.y + 20);
 		Text text = go.GetComponent<Text> ();
 		text.text = node.dateText;
 	}
