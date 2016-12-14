@@ -35,13 +35,13 @@ public class GlobePositionSynchronizer : MonoBehaviour {
 		if (activeTrackables.Count () == 0) {
 			currentTrackString = "No trackables";
 			listOfTracksString = "";
-//			earth.SetActive (false);
+			earth.SetActive (false);
 		} else {
 			TrackableBehaviour bestTrack = getBestTrack (activeTrackables);
-//			CopyEarthData earthPositionData = bestTrack.GetComponent<CopyEarthData> ();
-//			earth.SetActive (true);
-//			earth.transform.position = earthPositionData.pos;
-//			earth.transform.eulerAngles = earthPositionData.rot;
+			CopyEarthData earthPositionData = bestTrack.GetComponent<CopyEarthData> ();
+			earth.SetActive (true);
+			earth.transform.position = earthPositionData.pos;
+			earth.transform.eulerAngles = earthPositionData.rot;
 		}
 
 		currentTrackText.text = currentTrackString;
