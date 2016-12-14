@@ -7,28 +7,29 @@ public class EventNode : MonoBehaviour {
 
 	public Coordinator coordinator;
 
-	public string eventTitle;
-	public string eventDate;
-	public string eventYear;
-	public string eventDescription;
-
 	public Button eventBlurb;
-	private Text blurbTitle;
-	private Text blurbDate;
-	private Text blurbYear;
+	public Text blurbTitle;
+	public Text blurbDate;
+	public Text blurbYear;
 
 	public Image eventImage;
-	private Text title;
-	private Text date;
-	private Text year;
-	private Text description;
+	public Text title;
+	public Text date;
+	public Text year;
+	public Text description;
 
 	public GameObject globeEventPrefab;
-	private GlobeEvent globeEvent;
+	public GlobeEvent globeEvent;
+
+	public bool clickable = true;
 
 	// Use this for initialization
 	void Start () {
 		// Initialize blurb text fields
+		GameObject tEvents = GameObject.Find("TravelEvents");
+		EventInfo eInfo = tEvents.transform.GetChild (0).GetComponent<EventInfo>();
+
+
 		blurbTitle = GameObject.Find ("blurbTitle").GetComponent<Text>();
 		blurbDate = GameObject.Find ("blurbDate").GetComponent<Text>();
 		blurbYear = GameObject.Find ("blurbYear").GetComponent<Text> ();
@@ -43,37 +44,15 @@ public class EventNode : MonoBehaviour {
 		crossfadePopup (0f, 0f);
 		//eventText = eventImage.GetComponentInChildren<Text> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
-	void OnTriggerEnter() {
-		// Make blurb visible and set correct text
-		crossfadeBlurb (1f, 1f);
-		GameObject go = (GameObject)Instantiate (globeEventPrefab);
-		globeEvent = go.GetComponent<GlobeEvent> ();
-		globeEvent.SetPosition (coordinator.GetGlobePosition(transform.position));
-		blurbTitle.text = eventTitle;
-		blurbDate.text = eventDate;
-		blurbYear.text = eventYear;
-		//description.text = eventDescription;
-	}
-
-	void OnTriggerExit() {
-		//description.text = "";
-		Destroy (globeEvent.gameObject);
-		crossfadeBlurb (0f, 1f);
-	}
 
 	// Crossfade sets opacity of Graphics object to value between 0-1 over duration seconds
-	void crossfadeBlurb(float value, float duration) {
+	public void crossfadeBlurb(float value, float duration) {
+		clickable = !clickable;
 		eventBlurb.GetComponent<Image> ().CrossFadeAlpha (value, duration, false);
 		blurbTitle.CrossFadeAlpha (value, duration, false);
 		blurbDate.CrossFadeAlpha (value, duration, false);
 		blurbYear.CrossFadeAlpha (value, duration, false);
-
 	}
 
 	void crossfadePopup(float value, float duration) {
@@ -84,19 +63,22 @@ public class EventNode : MonoBehaviour {
 		description.CrossFadeAlpha (value, duration, false);
 	}
 
+	public void runInstantiateGo() {
+		GameObject go = (GameObject)Instantiate (globeEventPrefab);
+		globeEvent = go.GetComponent<GlobeEvent> ();
+		globeEvent.SetPosition (coordinator.GetGlobePosition(transform.position));
+	}
+
 	public void onClick() {
 		// Hide blurb, Make popup visible
-		crossfadeBlurb(0f, 0.5f);
-		crossfadePopup (1f, 0.5f);
-		// Set correct info in popup
-		title.text = eventTitle;
-		date.text = eventDate;
-		year.text = eventYear;
-		description.text = eventDescription;
-		// Pause time
-		Timeline timeline = GameObject.Find("Content").GetComponent<Timeline>();
-		if (timeline.running == true) {
-			timeline.PlayPause ();
+		if (clickable) {
+			crossfadeBlurb (0f, 0.5f);
+			crossfadePopup (1f, 0.5f);
+			// Pause time
+			Timeline timeline = GameObject.Find ("Content").GetComponent<Timeline> ();
+			if (timeline.running == true) {
+				timeline.PlayPause ();
+			}
 		}
 	}
 }
