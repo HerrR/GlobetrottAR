@@ -102,6 +102,9 @@ public class Timeline : MonoBehaviour {
 
 	public void Stop() {
 		running = false;
+		if (GameObject.Find ("PlayButton").GetComponent<Image> ().sprite != playSprite) {
+			GameObject.Find ("PlayButton").GetComponent<Image> ().sprite = playSprite;
+		}
 		timeSync.SetTimeMultiplier (0f);
 	}
 
