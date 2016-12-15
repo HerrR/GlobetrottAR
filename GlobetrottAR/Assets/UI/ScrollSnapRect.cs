@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -313,4 +314,16 @@ public class ScrollSnapRect : MonoBehaviour, IBeginDragHandler, IEndDragHandler,
             }
         }
     }
+
+	public void onClick() {
+		// Check alpha of Drake's background. If it's 1, Drake is selected.
+		float bgAlpha = GameObject.Find ("backgroundDrake").GetComponent<Image> ().color.a;
+		if (bgAlpha == 1f) {
+			SceneManager.LoadScene ("GlobeWithUI");
+			// Something to load Drake's path
+		}else if(bgAlpha == 0f){
+			SceneManager.LoadScene ("GlobeWithUI");
+			// Something to load Polo's path
+		}
+	}
 }
