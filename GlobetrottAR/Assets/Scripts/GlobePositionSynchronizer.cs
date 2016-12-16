@@ -26,7 +26,6 @@ public class GlobePositionSynchronizer : MonoBehaviour {
 
 		currentTrackString = "Best tracks";
 		listOfTracksString = "List of trackables";
-
 	}
 
 	void Update () {
@@ -41,7 +40,7 @@ public class GlobePositionSynchronizer : MonoBehaviour {
 			TrackableBehaviour bestTrack = getBestTrack (activeTrackables);
 			CopyEarthData earthPositionData = bestTrack.GetComponent<CopyEarthData> ();
 			earth.SetActive (true);
-//			earth.transform.position = earthPositionData.pos;
+			earth.transform.position = earthPositionData.pos;
 			earth.transform.eulerAngles = earthPositionData.rot;
 		}
 

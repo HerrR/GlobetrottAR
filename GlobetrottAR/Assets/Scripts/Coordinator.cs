@@ -11,6 +11,8 @@ public class Coordinator : MonoBehaviour {
     public float textureWidthPixels;
     public float textureHeightPixels;
 
+	public float globeScale;
+
 	private Vector3 center;
 	private float scale;
 
@@ -26,7 +28,7 @@ public class Coordinator : MonoBehaviour {
 	}
 
 	Vector3 LonLatToWorld(float lat, float lon) {
-		return Quaternion.AngleAxis(lon, -Vector3.up) * Quaternion.AngleAxis(lat, -Vector3.right) * new Vector3(0,0,1); 
+		return Quaternion.AngleAxis(lon, -Vector3.up) * Quaternion.AngleAxis(lat, -Vector3.right) * new Vector3(0,0, globeScale); 
 	}
 
 	public Vector3 GetGlobePosition() {
