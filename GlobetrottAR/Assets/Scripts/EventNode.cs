@@ -11,6 +11,7 @@ public class EventNode : MonoBehaviour {
 	public Text blurbTitle;
 	public Text blurbDate;
 	public Text blurbYear;
+	public Vector3 eventPos;
 
 	public Image eventImage;
 	public Text title;
@@ -38,6 +39,7 @@ public class EventNode : MonoBehaviour {
 		date = GameObject.Find("Date").GetComponent<Text>();
 		year = GameObject.Find("Year").GetComponent<Text>();
 		description = GameObject.Find ("Description").GetComponent<Text>();
+		eventPos = eInfo.eventPos;
 
 		// Set blurb and popup opacity to 0
 		crossfadeBlurb (0f, 0f);
@@ -66,7 +68,7 @@ public class EventNode : MonoBehaviour {
 	public void runInstantiateGo() {
 		GameObject go = (GameObject)Instantiate (globeEventPrefab);
 		globeEvent = go.GetComponent<GlobeEvent> ();
-		globeEvent.SetPosition (coordinator.GetGlobePosition(transform.position));
+		globeEvent.SetPosition (coordinator.GetGlobePosition(eventPos));
 	}
 
 	public void onClick() {
