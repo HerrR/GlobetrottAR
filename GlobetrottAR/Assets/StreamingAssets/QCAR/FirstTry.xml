@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
-  <Tracking>
-    <ImageTarget name="edge" size="0.040000 0.032204" />
-    <ImageTarget name="Murica_zoomed_out" size="0.300000 0.307886" />
-    <ImageTarget name="South_America" size="0.140000 0.115973" />
-    <ImageTarget name="Canada" size="0.110000 0.051935" />
-  </Tracking>
-</QCARConfig>
